@@ -1,0 +1,112 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: #1c1c1c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.card{
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    margin: 15px;
+    position: absolute;
+    user-select: none;
+    transition: 0.3s;
+    left: 0px;
+    top: 0px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: cyan;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px cyan, inset 0 0 5px cyan;
+}
+input[type="checkbox"]{
+    display: none;
+}
+label{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: nonde;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.card:nth-child(2){z-index: 3;}
+.card:nth-child(3){z-index: 2;opacity: 0;}
+.card:nth-child(4){z-index: 1;opacity: 0;}
+.card:nth-child(5){z-index: 1;opacity: 0;}
+.card:nth-child(6){z-index: 1;opacity: 0;}
+.card:nth-child(7){z-index: 1;opacity: 0;}
+.card:nth-child(8){z-index: 1;opacity: 0;}
+.card:nth-child(9){z-index: 1;opacity: 0;}
+.card:nth-child(10){z-index: 1;opacity: 0;}
+input[type="checkbox"]:checked ~ .card:nth-child(2){
+    width: 100px;
+    height: 100px;
+}
+input[type="checkbox"]:checked ~ .card:nth-child(3){
+    left: -110px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+input[type="checkbox"]:checked ~ .card:nth-child(4){
+    left: 110px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+input[type="checkbox"]:checked ~ .card:nth-child(5){
+    top: 110px;
+    left: 110px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+input[type="checkbox"]:checked ~ .card:nth-child(6){
+    top: 110px;
+    left: 0px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+input[type="checkbox"]:checked ~ .card:nth-child(7){
+    top: 110px;
+    left: -110px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+input[type="checkbox"]:checked ~ .card:nth-child(8){
+    top: -110px;
+    left: -110px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+input[type="checkbox"]:checked ~ .card:nth-child(9){
+    top: -110px;
+    left: 0px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+input[type="checkbox"]:checked ~ .card:nth-child(10){
+    top: -110px;
+    left: 110px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
